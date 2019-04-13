@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>CodeTogetherNG</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js" ></script>
+ </head>
+
+<body>
+
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a href="About.html">CodeTogetherNG</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li id="About"><a href="About.html">About</a></li>
+                    <li id="Contact"><a href="Contact.html">Contact</a></li>
+                    <li id="AddProject"><a href="AddProject.html">Add Project</a></li>
+                    <li id="ProjectsGrid"><a href="ProjectsGrid.html">Projects</a></li>
+                    <li id="TechnologiesList"><a href="Technologies.html">Technologies</a></li>
+                    <li id="UsersList"><a href="Users.html">Users</a></li>
+                     <ul class="nav navbar-nav navbar-right">
+                <li id="Register"><a href="Register.html">Register</a></li>
+                 <li id="Login"><a href="Login.html">Login</a></li>
+            </ul>
+                   
+                </ul>
+              
+            </div>
+        </div>
+    </nav>
+
+<div class="container body-content">
+	<H1>List of Technologies</H1>
+	
+<table class="table-bordered table-striped" id="TechTable" style="font-size: 20px;"></table>
+ 
+ <script>
+
+	var errorInRetrievingTechnologies = function ()
+	{
+		alert("Unable to retrieve list of technologies")
+	}
+
+	var populateTechnologiesTable = function (data)
+	{
+		for (var i =0; i<data.length;++i)
+		{
+			var tr = document.createElement("tr");
+			var td = document.createElement("td");
+			tr.append(td);
+
+			td.textContent = data[i].techName;
+
+			$("#TechTable").append(tr);
+		}
+	}
+
+	$.ajax(
+		{
+			url:"https://localhost:44332/API/TechList",
+			dataType : "json" ,
+			crossDomain: true
+		})
+		.done(populateTechnologiesTable)
+		.fail(errorInRetrievingTechnologies);
+
+ </script>
+
+  <script src="js/scripts.js" ></script>
+  </div>
+   <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr />
+                        <p width="full">&copy; 2019 - CodeTogetherNG</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

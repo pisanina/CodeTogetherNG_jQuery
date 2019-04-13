@@ -1,0 +1,179 @@
+<!DOCTYPE doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                CodeTogetherNG
+            </title>
+            <meta content="CodeTogetherNG" name="description">
+                <meta content="SitePoint" name="author">
+                    <link href="css/site.css" rel="stylesheet">
+                        <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+                            <script src="https://code.jquery.com/jquery-3.4.0.min.js">
+                            </script>
+                        </link>
+                    </link>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                        <span class="sr-only">
+                            Toggle navigation
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                    </button>
+                    <a href="About.html">
+                        CodeTogetherNG
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="About">
+                            <a href="About.html">
+                                About
+                            </a>
+                        </li>
+                        <li id="Contact">
+                            <a href="Contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li id="AddProject">
+                            <a href="AddProject.html">
+                                Add Project
+                            </a>
+                        </li>
+                        <li id="ProjectsGrid">
+                            <a href="ProjectsGrid.html">
+                                Projects
+                            </a>
+                        </li>
+                        <li id="TechnologiesList">
+                            <a href="Technologies.html">
+                                Technologies
+                            </a>
+                        </li>
+                        <li id="UsersList">
+                            <a href="Users.html">
+                                Users
+                            </a>
+                        </li>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li id="Register">
+                                <a href="Register.html">
+                                    Register
+                                </a>
+                            </li>
+                            <li id="Login">
+                                <a href="Login.html">
+                                    Login
+                                </a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>
+<div class="container body-content">
+</div>
+<p id="AboutPage">
+    CodeTogetherNG is a project that connects programers who want to learn how to develop applications in teams.
+</p>
+<p>
+    The project consists five applications
+    <ul>
+        <li>
+            Main Application. It is a web application written in following technologies: C#, ASP.NET MVC, .NET Core 2.1, Nunit, FakeItEasy(tool to fake/stab/mock dependencies), Dapper(micro ORM), Bootstrap, HTML, CSS.
+            <br/>
+            The repository is located on GitHub
+            <a href="https://github.com/pisanina/CodeTogetherNG">
+                CodeTogetherNG
+            </a>
+        </li>
+        <li>
+            E2E Tests. Tests writen in C#, Selenium WebDriver, Nunit, TSQL, Chromium Driver, PageObject Pattern.
+            <br/>
+            The repository is located on GitHub
+            <a href="https://github.com/pisanina/CodeTogetherNGE2E_Tests">
+                CodeTogetherNG_Tests
+            </a>
+        </li>
+        <li>
+            SQL Server DataBase Project. It is used to track data base schema changes. It uses TSQL and DacPac.
+            <br/>
+            The repository is located on GitHub
+            <a href="https://github.com/pisanina/CodeTogetherNG_DB">
+                CodeTogetherNG_DB
+            </a>
+        </li>
+        <li>
+            WebAPI. In this project I use Entity Framework Core, ASP.NET WebAPI Core.
+            <br/>
+            The repository is located on GitHub
+            <a href="https://github.com/pisanina/CodeTogetherNG_WebAPI">
+                CodeTogetherNG_WebAPI
+            </a>
+        </li>
+        <li>
+            WebAPI Tests. HTTP Client.
+            <br/>
+            The repository is located on GitHub
+            <a href="https://github.com/pisanina/CodeTogetherNG_WebAPI_Tests">
+                CodeTogetherNG_WebAPI_Tests
+            </a>
+        </li>
+    </ul>
+</p>
+<p>
+    Azure DevOps is used as a tool to manage the project. It contains a kanban task board and pipelines:
+    <a href="https://dev.azure.com/DanielZProjects/CodeTogetherNG">
+        Azure DevOps
+    </a>
+</p>
+<p>
+    The application and database are already released on Azure. I try to follow Continuous Deployment principle and it can be found with following links
+    <ul>
+        <li>
+            <a href="https://codetogetherng-test.azurewebsites.net">
+                Test Environment
+            </a>
+        </li>
+        <li>
+            <a href="https://codetogetherng.azurewebsites.net">
+                Live Environment
+            </a>
+        </li>
+        <li>
+            <a href="https://codetogetherng-webapi-test.azurewebsites.net/api/projects">
+                Test Environment for WebAPI
+            </a>
+        </li>
+        <li>
+            <a href="https://codetogetherng-webapi.azurewebsites.net/api/projects">
+                Live Environment for WebAPI
+            </a>
+        </li>
+    </ul>
+</p>
+ <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr />
+                        <p width="full">&copy; 2019 - CodeTogetherNG</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
