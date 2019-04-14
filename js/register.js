@@ -70,7 +70,7 @@ function ValidateForm()
 }
 
 function Register(){
-    debugger;
+   
     if(ValidateForm())
     {
         var userDto={ 
@@ -94,7 +94,7 @@ function RegisterSuccess(){ debugger;
 }
  
 function RegisterFailed(e,w,q){ 
-   debugger;
+   
    $("#errorsList")[0].innerHTML='';
 
     e.responseJSON.forEach(function(item)
