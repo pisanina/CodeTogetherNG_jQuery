@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/site.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.4.0.min.js" ></script>
+  <script src="/js/projectsgrid.js" ></script>
  </head>
 
 <body>
@@ -46,8 +47,65 @@
 </br>
 	
 
+<h2 id="ProjectGridPage">Projects list</h2>
+<hr>
+
+<style>
+    input {
+        max-width: 40%;
+        float: left
+    }
+</style>
+        <p>
+            <input class="form-control" type="text" name="Search" id="SearchInput" autofocus="" placeholder="Search" maxlength="50" minlength="2">
+            </p><div>
+                <button onclick="Search()" class="btn btn-default" type="submit" aria-label="Left Align" id="SearchButton">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+                <select name="TechList" id="TechList" size="4" multiple="">
+
+                        <option value="1">Angular</option>
+                        <option value="2">Assembly</option>
+                        <option value="3">C</option>
+                        <option value="4">C++</option>
+                        <option value="5">C#</option>
+                        <option value="6">Java</option>
+                        <option value="7">JavaScript</option>
+                        <option value="8">jQuery</option>
+                        <option value="9">Laravel</option>
+                        <option value="10">.Net</option>
+                        <option value="11">.Net Core</option>
+                        <option value="12">Node JS</option>
+                        <option value="13">Objective-C</option>
+                        <option value="14">Python</option>
+                        <option value="15">Pl/SQL</option>
+                        <option value="16">React</option>
+                        <option value="17">Swift</option>
+                        <option value="18">Visual Basic</option>
+                </select>
+
+                <select name="state" id="State">
+                    <option value="null">Project State</option>
+
+                        <option value="1"> Preparing</option>
+                        <option value="2">In Progress</option>
+                        <option value="3">Closed</option>
+                </select>
+
+                <select name="NewMembers" id="NewMembers">
+                    <option value="null">Members</option>
+                    <option value="true">Wanted</option>
+                    <option value="false">We Are Full</option>
+                </select>
+            </div>
+        <p></p>
+    </form>
+    <hr>
+
+    <div class="list-group" id="grid">
   
-  </div>
+   </div>
+   
    <footer>
             <div class="container">
                 <div class="row">
