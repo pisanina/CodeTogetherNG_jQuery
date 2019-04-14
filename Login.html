@@ -1,0 +1,111 @@
+<html><head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Register - CodeTogetherNG</title>
+
+     <script src="https://code.jquery.com/jquery-3.4.0.min.js" ></script>
+     <script src="/js/login.js" ></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+  
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a href="About.html">CodeTogetherNG</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li id="About"><a href="About.html">About</a></li>
+                    <li id="Contact"><a href="Contact.html">Contact</a></li>
+                    <li id="AddProject"><a href="AddProject.html">Add Project</a></li>
+                    <li id="ProjectsGrid"><a href="ProjectsGrid.html">Projects</a></li>
+                    <li id="TechnologiesList"><a href="Technologies.html">Technologies</a></li>
+                    <li id="UsersList"><a href="Users.html">Users</a></li>
+                     <ul class="nav navbar-nav navbar-right">
+                <li id="Register"><a href="Register.html">Register</a></li>
+                 <li id="Login"><a href="Login.html">Login</a></li>
+            </ul>
+                   
+                </ul>
+              
+            </div>
+        </div>
+    </nav>
+
+     <div class="container body-content">
+      
+<h2>Log in</h2>
+<div class="row">
+    <div class="col-md-4">
+        <section>
+          
+                <h4>Use a local account to log in.</h4>
+                <hr>
+                <span class="text-danger field-validation-valid" id="errorLogin" style="display:none" >Invalid login attempt. </span>
+                <div class="form-group">
+                    <label for="Input_Email">Email</label>
+                    <input class="form-control" type="email" id="Input_Email" name="Input.Email" value="">
+                    <span class="text-danger field-validation-valid" id="errorEmail" style="display:none"> The Email field is not a valid e-mail address.</span>
+                </div>
+                <div class="form-group">
+                    <label for="Input_Password">Password</label>
+                    <input class="form-control" type="password"  id="Input_Password" name="Input.Password">
+                    <span class="text-danger field-validation-valid" id="errorPassword" style="display:none" >The Password field is required. </span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label for="Input_RememberMe">
+                            <input type="checkbox" id="Input_RememberMe" name="Input.RememberMe" value="true">
+                            Remember me?
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button onclick="Login()" class="btn btn-default">Log in</button>
+                </div>
+                <div class="form-group">
+                    
+                    <p>
+                        <a href="Register.html">Register as a new user</a>
+                    </p>
+                </div>
+           
+        </section>
+    </div>
+    
+</div>
+</body>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+                <p width="full">© 2019 - CodeTogetherNG</p>
+            </div>
+        </div>
+    </div>
+</footer>
+ 
+
+    
+    
+   
+    
+
+    
+    
+
+
+
+
+
