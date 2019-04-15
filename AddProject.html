@@ -6,11 +6,12 @@
 
   <title>CodeTogetherNG</title>
   <meta content="CodeTogetherNG" name="description">
-
+ 
   <link rel="stylesheet" href="css/site.css">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.4.0.min.js" ></script>
- </head>
+  
+</head>
 
 <body>
 
@@ -36,30 +37,81 @@
                      <ul class="nav navbar-nav navbar-right">
         				<li id="Register"><a href="Register.html">Register</a></li>
        					 <li id="Login"><a href="Login.html">Login</a></li>
-    				</ul>
-     </ul>
+    				        </ul>
+                </ul>
 
               </div>
             </div>
         </div>
-           </nav>
+  </nav>
 
 <div class="container body-content">
 </br>
 	
 
-  
-  </div>
+<h2>Please add your project</h2>
 
-   <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <hr />
-                        <p width="full">&copy; 2019 - CodeTogetherNG</p>
-                    </div>
+<hr>
+<div class="row">
+
+        <div class="col-md-6">
+            <div class="d-inline">
+                <div class="form-group">
+                    <input class="form-control" id="Title" autofocus="" placeholder="Please insert title" type="text"> 
+                    <span class="text-danger field-validation-valid" id="errorTitle" style="display:none" >Title has a minimum length of 3 and maximum length of 50</span>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="Description" placeholder="Please insert description" rows="5" style="resize:vertical" ></textarea>
+                  <span class="text-danger field-validation-valid" id="errorDescription" style="display:none">Description has a minimum length of 20 and maximum length of 1000</span>
                 </div>
             </div>
-        </footer>
+                <div class="form-check">
+                    <label class="form-check-label" for="NewMembers">Looking for new members?</label>
+                    <input class="form-check-input" id="NewMembers" type="checkbox"  name="NewMembers">
+                   
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <select name="TechList" id="TechList" size="7" multiple="">
+
+                        <option value="1">Angular</option>
+                        <option value="2">Assembly</option>
+                        <option value="3">C</option>
+                        <option value="4">C++</option>
+                        <option value="5">C#</option>
+                        <option value="6">Java</option>
+                        <option value="7">JavaScript</option>
+                        <option value="8">jQuery</option>
+                        <option value="9">Laravel</option>
+                        <option value="10">.Net</option>
+                        <option value="11">.Net Core</option>
+                        <option value="12">Node JS</option>
+                        <option value="13">Objective-C</option>
+                        <option value="14">Python</option>
+                        <option value="15">Pl/SQL</option>
+                        <option value="16">React</option>
+                        <option value="17">Swift</option>
+                        <option value="18">Visual Basic</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                 <button onclick="Create()" class="btn btn-default" id="Create" >Create</button>
+            </div>
+
+<script src="https://code.jquery.com/jquery-3.4.0.min.js" ></script>
+<script src="/js/addproject.js" ></script>
+
 </body>
+   <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr />
+                    <p width="full">&copy; 2019 - CodeTogetherNG</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </html>
