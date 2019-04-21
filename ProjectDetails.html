@@ -1,0 +1,143 @@
+
+<html><head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Project Details - CodeTogetherNG</title>
+
+     
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="About.html">CodeTogetherNG</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li id="About"><a href="About.html">About</a></li>
+                    <li id="Contact"><a href="Contact.html">Contact</a></li>
+                    <li id="AddProject"><a href="AddProject.html">Add Project</a></li>
+                    <li id="ProjectsGrid"><a href="ProjectsGrid.html">Projects</a></li>
+                    <li id="TechnologiesList"><a href="Technologies.html">Technologies</a></li>
+                    <li id="UsersList"><a href="Users.html">Users</a></li>
+                     <ul class="nav navbar-nav navbar-right">
+                        <li id="Register"><a href="Register.html">Register</a></li>
+                         <li id="Login"><a href="Login.html">Login</a></li>
+                    </ul>
+                </ul>
+              </div>
+           </div>
+    </div>
+</nav>
+    
+
+<div class="container body-content">
+        
+
+<h2 id="ProjectDetailsPage">Project Details</h2>
+
+<style>
+    input, select, textarea {
+        max-width: 70%;
+    }
+</style>
+
+
+    <div class="form-group">
+        <label class="control-label" for="Title">Title</label>
+        <input class="form-control" id="Title" readonly="ReadOnly" >
+        <span class="text-danger field-validation-valid" id="errorTitle"></span>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label" for="OwnerName">Owner Name</label>
+
+        <a id="Owner"></a>
+    </div>
+
+    <div class="form-group" id="membersList">
+        <label class="control-label" for="MembersNames">Members</label>
+                 <!--        <a id="User_coder@a.com" href="/Member/ShowUserProfile?userName=coder@a.com">coder@a.com</a>
+                <a id="User_" href="/Member/ShowUserProfile?userName=TestUser@a.com">TestUser@a.com</a> -->
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="Description">Description</label>
+        <textarea class="form-control" id="Description" readonly="ReadOnly"></textarea>
+        <span class="text-danger field-validation-valid" id="errorDescription"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="CreationDate">CreationDate</label>
+        <input class="form-control" id="CreationDate" readonly="true" type="text" name="CreationDate">
+    </div>
+
+    <div class="form-check">
+        <label class="form-check-label" for="NewMembers">Looking for new members?</label>
+        <input class="form-check-input" id="NewMembers" type="checkbox" disabled="disabled" checked="checked">
+    </div>
+
+    <div class="form-group">
+
+        <label class="control-label" for="TechList">TechList</label>
+
+        <select name="TechList" id="TechList" size="7" multiple="" disabled="disabled">
+                    <option name="id" value="1">Angular</option>
+                    <option name="id" value="2">Assembly</option>
+                    <option name="id" value="3">C</option>
+                    <option name="id" value="4">C++</option>
+                    <option name="id" value="5">C#</option>
+                    <option name="id" value="6">Java</option>
+                    <option name="id" value="7">JavaScript</option>
+                    <option name="id" value="8">jQuery</option>
+                    <option name="id" value="9">Laravel</option>
+                    <option name="id" value="10">.Net</option>
+                    <option name="id" value="11">.Net Core</option>
+                    <option name="id" value="12">Node JS</option>
+                    <option name="id" value="13">Objective-C</option>
+                    <option name="id" value="14">Python</option>
+                    <option name="id" value="15">Pl/SQL</option>
+                    <option name="id" value="16">React</option>
+                    <option name="id" value="17">Swift</option>
+                    <option name="id" value="18">Visual Basic</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+
+        <label class="control-label" for="StateId">Project State</label>
+
+        <select name="StateId" id="State" disabled="disabled">
+                    <option name="id" value="1">Preparing</option>
+                    <option name="id" value="2">In Progress</option>
+                    <option name="id" value="3">Closed</option>
+        </select>
+    </div>
+
+<p id="requestState">  </p>
+
+<script src="https://code.jquery.com/jquery-3.4.0.min.js" ></script>
+<script src="/js/projectdetails.js" ></script>
+
+</body>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                        <p width="full">© 2019 - CodeTogetherNG</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</html>
