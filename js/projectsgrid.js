@@ -10,7 +10,7 @@ var populateProjects = function (data)
 		{
 			var project = $("<div class='col-md-6'></div>");
 
-			var link = $("<a class='list-group-item' id='project_"+data[i].id+"' href='/Project/ProjectDetails/"+data[i].id+"'></a>");
+			var link = $("<a class='list-group-item' id='project_"+data[i].id+"' href='ProjectDetails.html?id="+data[i].id+"'></a>");
 			var FirstRow = $("<div class='flex' id='up_"+data[i].id+"'></div>");
 				var title = $("<h4 float:left></h4>");
 				title.text(data[i].title).html();
@@ -61,7 +61,6 @@ function GenerateQuery()
 		query += si;
 	}
 	
-
 	if($("#TechList").val())
 	{
 		var t ="";
@@ -78,7 +77,6 @@ function GenerateQuery()
 		query = query+s;
 	}
 	
-
 	if($("#NewMembers").val() && $("#NewMembers").val() !="null")
 	{
 		var m = "&newMembers="+$("#NewMembers").val();

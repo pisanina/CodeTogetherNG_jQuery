@@ -25,20 +25,23 @@
                 </button>
                 <a href="About.html">CodeTogetherNG</a>
             </div>
-            <div class="navbar-collapse collapse">
+             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li id="About"><a href="About.html">About</a></li>
                     <li id="Contact"><a href="Contact.html">Contact</a></li>
-                    <li id="AddProject"><a href="AddProject.html">Add Project</a></li>
+                    <li id="AddProject" class="logged"><a href="AddProject.html">Add Project</a></li>
                     <li id="ProjectsGrid"><a href="ProjectsGrid.html">Projects</a></li>
                     <li id="TechnologiesList"><a href="Technologies.html">Technologies</a></li>
                     <li id="UsersList"><a href="Users.html">Users</a></li>
-                     <ul class="nav navbar-nav navbar-right">
-        				<li id="Register"><a href="Register.html">Register</a></li>
-       					 <li id="Login"><a href="Login.html">Login</a></li>
-    				</ul>
-     </ul>
-
+                    <li id="Profile" class="logged"><a href="Profile.html">Profile</a></li>
+                     <ul class="nav navbar-nav navbar-right unlogged">
+                                <li id="Register" ><a href="Register.html">Register</a></li>
+                                <li id="Login" ><a href="Login.html">Login</a></li>
+                        </ul>
+                         <ul class="nav navbar-nav navbar-right logged">
+                            <li  ><a id="LoggedUser" href="Register.html"></a></li>
+                      </ul>
+                 </ul>
               </div>
             </div>
         </div>
@@ -53,6 +56,7 @@
 
 
   </div>
+
 </body>
  <footer>
             <div class="container">
@@ -64,4 +68,5 @@
                 </div>
             </div>
         </footer>
+  <script src="/js/LayoutForLoggedUsers.js" ></script>
 </html>

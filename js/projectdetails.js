@@ -64,11 +64,11 @@ var populateDetails = function (data){
     debugger;
     $("#Title").val(data.title);
     $("#Owner")[0].text=data.owner.userName;
-    $("#Owner")[0].href="/Profile.html?userId="+data.owner.ownerId;
+    $("#Owner")[0].href="/Profile.html?userId="+data.owner.id;
    
     for (i=0; i<data.member.length; i++)
         {
-            var link = $("<a id='user_"+data.member[i].userName+"' href='Profile.html?userId="+data.member[i].memberId+"'>"+data.member[i].userName+" "+"</a>");
+            var link = $("<a id='user_"+data.member[i].userName+"' href='Profile.html?userId="+data.member[i].id+"'>"+data.member[i].userName+" "+"</a>");
              $("#membersList").append(link);
         }
 

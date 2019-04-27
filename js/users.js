@@ -4,7 +4,7 @@ var errorInRetrievingUsers = function ()
 	}
 
 var populateUsersTable = function (data)
-	{
+	{debugger;
 		for (var i =0; i<data.length;++i)
 		{
 			var tr = document.createElement("tr");
@@ -21,7 +21,7 @@ var populateUsersTable = function (data)
 			tr.append(tdAdvanced);
 			tr.append(tdExpert);
 
-			tdName.innerHTML = "<a href ='/Member/ShowUserProfile?userName="+data[i].userName+"'>"+data[i].userName+"</a>"
+			tdName.innerHTML = "<a href ='/Profile.html?userId="+data[i].id+"'>"+data[i].userName+"</a>"
 			tdOwner.textContent = data[i].owner;
 			tdMember.textContent = data[i].member;
 			tdBeginner.textContent = data[i].beginner;

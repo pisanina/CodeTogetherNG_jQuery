@@ -42,6 +42,13 @@ $("#Input_Password")
       .focusout(ValidatePassword);
 })
 
+$("#Input_Password").keypress(function(event) {
+  if ( event.which == 13 ) {
+     Login();
+   }
+
+})
+
 function Login(){
     debugger;
     if(ValidateEmail())
@@ -67,8 +74,13 @@ function Login(){
 function LoginSuccess(e){ 
   debugger;
  window.localStorage.setItem('codetogetherng_jwt', e.token);
+ window.location.href = "ProjectsGrid.html";
+
+
 }
 
 function LoginFailed(){ $("#errorLogin").show(); 
 }
+
+
 
