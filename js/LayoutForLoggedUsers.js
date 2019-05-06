@@ -1,7 +1,9 @@
 var currentLoggedUserName;
+var currentLoggedUserID;
+var urlParams = new URLSearchParams(window.location.search);
 
 $(document).ready(function LoggedUser(){
-	debugger;
+	
     $.ajax(
 			{            
 				headers: {
@@ -14,22 +16,24 @@ $(document).ready(function LoggedUser(){
 			}
 		)
         .done(function(data){
-        	debugger; 
-        	currentLoggedUserName=data;
+        
+        	currentLoggedUserName = data.name;
+        	currentLoggedUserID = data.id;
         	$(".unlogged").hide(); 
         	$(".logged").show();  
-        	$("#LoggedUser").text('Hello '+data+'!' )
+        	$("#LoggedUser").text('Hello '+currentLoggedUserName+'!');
+        	$("#LoggedUser").attr("href", "Profile.html?userId="+data.id);
         })
-        .fail(errorInRetrievingcurrentLoggedUserName)
+        .fail();
 });
 
 $(document).ready(function(){
 	$("#LogOut").click(function(event) {
 	  	LogOut();
-	})
+	});
 });
 
 function LogOut(){
   window.localStorage.removeItem('codetogetherng_jwt');
   window.location.href = "About.html";
-};
+}

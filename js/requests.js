@@ -1,6 +1,10 @@
 $(document).ready(function(){
  $.ajax(
-{                   
+{             
+ headers: {
+             Authorization: 'Bearer ' 
+             +window.localStorage.getItem('codetogetherng_jwt')},
+
             url:"https://localhost:44332/API/RequestList/"+projectId,
             dataType : "json" ,
             crossDomain: true
@@ -15,30 +19,31 @@ var populateRequests = function (data)
 		$("#grid").html("");
 		for (var i =0; i<data.length;++i)
 		{
-			var request = $("<div class='col-md-6'></div>");
+			var request = $("<div class='list-group-item' id='project'"+data.Id">");
 
-			var link = $("<a class='list-group-item' id='project_"+data[i].id+"' href='ProjectDetails.html?id="+data[i].id+"'></a>");
+			// var link = $("<a class='list-group-item' id='project_"+data[i].id+"' href='ProjectDetails.html?id="+data[i].id+"'></a>");
 			var FirstRow = $("<div class='flex' id='up_"+data[i].id+"'></div>");
 				var title = $("<h4 float:left></h4>");
 				title.text(data[i].title).html();
-				var techs = $("<small>"+data[i].technologies+"</small>");
+				var details = $("<small><p>"+data[i].MemberName+"</p><p>"+data[i].Date+"</p></small>");
 
-			var SecondRow = $("<div class='flex' id='up_"+data[i].id+"'></div>");
-				var desc = $("<p></p>");
-				desc.text(data[i].description).html();
-				var members = $("<span id='newMembers-icon' class='glyphicon glyphicon-user' float:'right'></span>");
+			var LastRow = $("<div class='flex'></div>");
+				var message = $("<p>"+data[i].Message"</p>");
+				var buttons = $("<input type='button' class='btn btn-light' id='Accept_'"+data[i].MemberName+" value='Accept' onclick='Accept(, true)'>
+                        <input type='button' class='btn btn-light' id='Decline_'"+data[i].MemberName+" value='Decline' onclick='location.href='/Member/ReactToRequest/7?accept=False&amp;ProjectId=2'">");
 
-			project.append(link);
-			link.append(FirstRow);
-			link.append(SecondRow);
+			reqest.append(FirstRow);
+			reqest.append(LastRow);
+			
 			FirstRow.append(title);
-			FirstRow.append(techs);
-			SecondRow.append(desc);
+			FirstRow.append(details);
+			SecondRow.append(message);
+			SecondRow.append(buttons);
 			
 			if(data[i].newMembers)
 				SecondRow.append(members);
 
-			$("#grid").append(project);
+			$("#grid").append(request);
 		}
 	}
 
@@ -65,7 +70,11 @@ function Accept(accept){
                 };
         $.ajax(
             {
-                type:"POST",
+            	 headers: {
+                     Authorization: 'Bearer ' 
+                     +window.localStorage.getItem('codetogetherng_jwt')},
+
+                type:"PUT",
                 url:"https://localhost:44332/API/Projects/Request",
                 dataType : "json" ,
                 crossDomain: true,
@@ -84,5 +93,5 @@ function Success(){
 };
 
 function Failed(){
-  Allert("Sorry, there was a problem")
+  alert("Sorry, there was a problem")
 };

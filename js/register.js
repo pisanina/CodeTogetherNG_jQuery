@@ -90,7 +90,7 @@ function Register(){
             .fail(RegisterFailed);
     }
 }
-function RegisterSuccess(){ debugger;
+function RegisterSuccess(){ window.location.href = "Login.html"; 
 }
  
 function RegisterFailed(e,w,q){ 
@@ -104,5 +104,5 @@ function RegisterFailed(e,w,q){
             li.textContent = item.description;
 
             $("#errorsList").append(li);
-    })
+    });
 }  

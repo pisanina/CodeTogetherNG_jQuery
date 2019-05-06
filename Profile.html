@@ -1,21 +1,20 @@
 <html><head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Project Details - CodeTogetherNG</title>
-     
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/site.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - CodeTogetherNG</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
-
 <body>
- <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
                 </button>
                 <a href="About.html">CodeTogetherNG</a>
             </div>
@@ -28,137 +27,123 @@
                     <li id="TechnologiesList"><a href="Technologies.html">Technologies</a></li>
                     <li id="UsersList"><a href="Users.html">Users</a></li>
                     <li id="Profile" class="logged"><a href="Profile.html">Profile</a></li>
-                        <ul class="nav navbar-nav navbar-right unlogged">
-                                <li id="Register" ><a href="Register.html">Register</a></li>
-                                     <li id="Login" ><a href="Login.html">Login</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right logged">
-                            <li  ><a id="LoggedUser" href="Register.html"></a></li>
-                        </ul>
-                 </ul>
-              </div>
-           </div>
+                    <ul class="nav navbar-nav navbar-right unlogged">
+                        <li id="Register" ><a href="Register.html">Register</a></li>
+                        <li id="Login" ><a href="Login.html">Login</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right logged">
+                        <li  ><a id="LoggedUser" href="Profile.html"></a></li>
+                        <li  ><a id="LogOut" href="About.html">LogOut</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
     </div>
 </nav>
-    
 
- <div class="container">
+<div class="container">
     <h2 id="ProfileHeader"></h2>
- 
-        <div class="col-md-12 owneronly" id="addSkillPanel">
-            <select name="techId" id="TechList">
-
-                    <option value="1">Angular</option>
-                    <option value="2">Assembly</option>
-                    <option value="3">C</option>
-                    <option value="4">C++</option>
-                    <option value="5">C#</option>
-                    <option value="6">Java</option>
-                    <option value="7">JavaScript</option>
-                    <option value="8">jQuery</option>
-                    <option value="9">Laravel</option>
-                    <option value="10">.Net</option>
-                    <option value="11">.Net Core</option>
-                    <option value="12">Node JS</option>
-                    <option value="13">Objective-C</option>
-                    <option value="14">Python</option>
-                    <option value="15">Pl/SQL</option>
-                    <option value="16">React</option>
-                    <option value="17">Swift</option>
-                    <option value="18">Visual Basic</option>
-            </select>
-
-            <select name="level" id="Level" required="">
-                <option value="">Level</option>
-                <option value="1">Beginner</option>
-                <option value="2">Advanced</option>
-                <option value="3">Expert</option>
-            </select>
-
-            <input type="submit" value="Add" class="btn btn-sm" id="Add" onclick="AddSkill()">
-        </div>
-
+    
+    <div class="col-md-12 owneronly" id="addSkillPanel">
+        <select name="techId" id="TechList">
+            <option value="1">Angular</option>
+            <option value="2">Assembly</option>
+            <option value="3">C</option>
+            <option value="4">C++</option>
+            <option value="5">C#</option>
+            <option value="6">Java</option>
+            <option value="7">JavaScript</option>
+            <option value="8">jQuery</option>
+            <option value="9">Laravel</option>
+            <option value="10">.Net</option>
+            <option value="11">.Net Core</option>
+            <option value="12">Node JS</option>
+            <option value="13">Objective-C</option>
+            <option value="14">Python</option>
+            <option value="15">Pl/SQL</option>
+            <option value="16">React</option>
+            <option value="17">Swift</option>
+            <option value="18">Visual Basic</option>
+        </select>
+        <select name="level" id="Level" required="">
+            <option value="">Level</option>
+            <option value="1">Beginner</option>
+            <option value="2">Advanced</option>
+            <option value="3">Expert</option>
+        </select>
+        <input type="submit" value="Add" class="btn btn-sm" id="Add" onclick="AddSkill()">
+    </div>
     <br><br>
-
     <span id="noSkills" style= "display:none"> No skills defined yet </span>
     <table class="table-bordered table-striped table" id="TechTable" style="font-size: 14px;">
         <thead>
             <tr>
                 <th>User's skills</th>
                 <th>Skill Level</th>
-                    <th></th>            </tr>
-        </thead>
-        <tbody id= techbody>
-        </tbody>
-    </table>
-
+                <th></th>            </tr>
+            </thead>
+            <tbody id= techbody>
+            </tbody>
+        </table>
         <div class="col-md-12 owneronly" id = "addITRolePanel">
             <select name="roleId" id="ITRoleList">
-
-                    <option value="1">Automation Tester</option>
-                    <option value="2">Back-end Developer</option>
-                    <option value="3">Business Analyst</option>
-                    <option value="4">Configuration Engineer</option>
-                    <option value="5">DBA</option>
-                    <option value="6">Delivery Manager</option>
-                    <option value="7">Full-stack developer</option>
-                    <option value="8">Front-end Developer</option>
-                    <option value="9">Incident Manager</option>
-                    <option value="10">Infrastructure Engineer</option>
-                    <option value="11">Project Owner</option>
-                    <option value="12">Release Manager</option>
-                    <option value="13">Solution Architect</option>
-                    <option value="14">Tester</option>
-                    <option value="15">Technical Architect</option>
+                <option value="1">Automation Tester</option>
+                <option value="2">Back-end Developer</option>
+                <option value="3">Business Analyst</option>
+                <option value="4">Configuration Engineer</option>
+                <option value="5">DBA</option>
+                <option value="6">Delivery Manager</option>
+                <option value="7">Full-stack developer</option>
+                <option value="8">Front-end Developer</option>
+                <option value="9">Incident Manager</option>
+                <option value="10">Infrastructure Engineer</option>
+                <option value="11">Project Owner</option>
+                <option value="12">Release Manager</option>
+                <option value="13">Solution Architect</option>
+                <option value="14">Tester</option>
+                <option value="15">Technical Architect</option>
             </select>
             <input type="submit" value="Add" class="btn btn-sm" id="AddITRole" onclick="AddITRole()">
         </div>
-
-    <br><br>
-
-   <span id="noRoles" style= "display:none"> No roles defined yet </span>
-    <table class="table-bordered table-striped table" id="RolesTable" style="font-size: 14px;">
-        <thead>
-            <tr>
-                <th>User's roles</th>
-
+        <br><br>
+        <span id="noRoles" style= "display:none"> No roles defined yet </span>
+        <table class="table-bordered table-striped table" id="RolesTable" style="font-size: 14px;">
+            <thead>
+                <tr>
+                    <th>User's roles</th>
                     <th></th>            </tr>
-        </thead>
-        <tbody id=rolesbody>
-            <tr>
-    
-            </tr>
-        </tbody>
-    </table>
-    <br><br>
-
-
-    <span id="noProjects" style= "display:none"> This user is not involved in any project yet </span>
-    <table class="table-bordered table-striped table" id="ProjectsTable" style="font-size: 14px;">
-        <thead>
-            <tr>
-                <th>Projects this users is involved in</th>
-            </tr>
-        </thead>
-        <tbody id="projectsbody">
-              
-        </tbody>
-    </table>
-
-
-<script src="https://code.jquery.com/jquery-3.4.0.min.js" ></script>
-<script src="/js/profile.js" ></script>
-<script src="/js/LayoutForLoggedUsers.js" ></script>
-</div>
-</body>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <hr>
-                        <p width="full">© 2019 - CodeTogetherNG</p>
-                    </div>
+                </thead>
+                <tbody id=rolesbody>
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+            <span id="noProjects" style= "display:none"> This user is not involved in any project yet </span>
+            <table class="table-bordered table-striped table" id="ProjectsTable" style="font-size: 14px;">
+                <thead>
+                    <tr>
+                        <th>Projects this users is involved in</th>
+                    </tr>
+                </thead>
+                <tbody id="projectsbody">
+                    
+                </tbody>
+            </table>
+            <script src="https://code.jquery.com/jquery-3.4.0.min.js" ></script>
+            <script src="/js/profile.js" ></script>
+            <script src="/js/LayoutForLoggedUsers.js" ></script>
+        </div>
+    </body>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <p width="full">© 2019 - CodeTogetherNG</p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 </html>

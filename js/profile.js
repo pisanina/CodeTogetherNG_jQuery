@@ -1,4 +1,4 @@
-var urlParams = new URLSearchParams(window.location.search);
+
 
 var userId= urlParams.get('userId');
 var profileUserName;
@@ -220,5 +220,5 @@ function AddITRole()
                 data: JSON.stringify(roleid)
 })
     .done( AjaxProfile )
-    .fail(function(e,a){debugger; alert("Fail To Add ITRole")})
+    .fail(function(e,a){debugger; alert("Fail To Add ITRole");})
 }
