@@ -184,3 +184,37 @@ function DeleteProject(){
             .fail(Failed);
   
 };
+
+function EditProject(){
+     var ChangeProject={ 
+                    Title: $("#Title").val(),
+                    Description: $("#Description").val(),
+                    NewMembers: $("#NewMembers").val(),
+                    State: $("#State").val(),
+                    Technologies: $("#TechList").val(),
+                    ProjectId: projectId,
+                };
+        $.ajax(
+            {
+                 headers: {
+                     Authorization: 'Bearer ' 
+                     +window.localStorage.getItem('codetogetherng_jwt')},
+
+                type:"PUT",
+                url:"https://localhost:44332/API/Projects/Change",
+                //dataType : "json" ,
+                crossDomain: true,
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(ChangeProject)
+            })
+            .done(function(){location.reload(true);})
+            .fail(Failed);
+  
+}
+
+function ShowNewRequests(){
+    if(currentLoggedUserName == ownerName.toLowerCase())
+    {
+        window.location.href = "Requests.html?projectId="+projectId;
+    }
+}
